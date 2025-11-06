@@ -48,12 +48,11 @@ functions:
           cors: true
           integration: lambda
 
-  subir_archivo:
-    handler: subir_archivo.lambda_handler
-    memorySize: 512  # Más memoria para subir archivos
+  generar_url_subida:
+    handler: generar_url_subida.lambda_handler
     events:
       - http:
-          path: /s3/subir-archivo
+          path: /s3/generar-url-subida
           method: post
           cors: true
           integration: lambda
